@@ -35,11 +35,17 @@ public class PlayerDo : MonoBehaviour
 
     //---------------------------------
 
+    [SerializeField] GameObject Reloading;
+    private Animator animator;
+
+    //---------------------------------
+
     private void Start()
     {
         Camera = GameObject.Find("Camera");
         ComponentCamera = Camera.GetComponent<Camera>();
         sounds = this.gameObject.GetComponent<AudioSource>();
+        animator = Reloading.GetComponent<Animator>();
 
         allamountammo = ammo * cartridges;
 
@@ -70,6 +76,7 @@ public class PlayerDo : MonoBehaviour
                 ammo = 30;
                 sounds.clip = Reload;
                 sounds.Play();
+                animator.SetTrigger("IsReloading");
             }
             else if (ammo <= 0 && cartridges <= 0)
             {
@@ -82,20 +89,22 @@ public class PlayerDo : MonoBehaviour
             if (cartridges > 1)
             {
                 ammo = 30;
-
+                animator.SetTrigger("IsReloading");
+                sounds.clip = Reload;
+                sounds.Play();
             }
             else if (cartridges == 1)
             {
                 ammo = allamountammo;
+                animator.SetTrigger("IsReloading");
+                sounds.clip = Reload;
+                sounds.Play();
             }
             else if (cartridges < 1)
             {
                 sounds.clip = CanNotReload;
                 sounds.Play();
             }
-
-            sounds.clip = Reload;
-            sounds.Play();
 
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
