@@ -359,13 +359,11 @@
 "Assets/Scripts/GameLogic/Ballets/ScriptBallets.cs"
 "Assets/Scripts/Player/PlayerDo.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/DecalDestroyer.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/ExtinguishableFire.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/GunAim.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/GunShoot.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/ParticleCollision.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/ParticleExamples.cs"
-"Assets/UnityTechnologies/EffectExamples/Shared/Scripts/ParticleMenu.cs"
+"Assets/Toby Fredson/The Toby Foliage Engine/(TTFE)_Core/Resources/(TTFE) GLOBAL CONTROLLER/Scripts/TobyConstants.cs"
+"Assets/Toby Fredson/The Toby Foliage Engine/(TTFE)_Core/Resources/(TTFE) GLOBAL CONTROLLER/Scripts/TobyGlobalShadersController.cs"
+"Assets/Toby Fredson/The Toby Foliage Engine/(TTFE)_Core/Resources/(TTFE) GLOBAL CONTROLLER/Scripts/TobyShaderValuesModel.cs"
+"Assets/Toby Fredson/The Toby Foliage Engine/(TTFE)_Demo/Scripts/ExtendedFlycam.cs"
+"Assets/Toby Fredson/The Toby Foliage Engine/(TTFE)_Demo/Scripts/FPSController.cs"
 -langversion:9.0
 /deterministic
 /optimize+
