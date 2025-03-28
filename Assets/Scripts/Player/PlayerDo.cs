@@ -40,12 +40,18 @@ public class PlayerDo : MonoBehaviour
 
     //---------------------------------
 
+    [SerializeField] GameObject Gun;
+    private GunsDo gunsdo;
+
+    //---------------------------------
+
     private void Start()
     {
         Camera = GameObject.Find("Camera");
         ComponentCamera = Camera.GetComponent<Camera>();
         sounds = this.gameObject.GetComponent<AudioSource>();
         animator = Reloading.GetComponent<Animator>();
+        gunsdo = Gun.GetComponent<GunsDo>();
 
         allamountammo = ammo * cartridges;
 
@@ -69,6 +75,7 @@ public class PlayerDo : MonoBehaviour
                 lastAttackTime = Time.time;
                 ammo--;
                 allamountammo--;
+                gunsdo.blowback();
             }
             else if (ammo <= 0 && cartridges > 0)
             { 
